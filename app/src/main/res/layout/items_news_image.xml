@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="NewsItemImage"
+            type="com.example.stocknews.data.NewsItem" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    >
+
+    <ImageView
+        glide_url="@{NewsItemImage.newsImg}"
+        android:scaleType="centerCrop"
+        android:id="@+id/item_news_image_newsimg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+         Set_Background="@{NewsItemImage.bgColor1}"
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_news_image_newsimg"
+        app:layout_constraintVertical_bias="1.0"
+
+        android:alpha="0.9"/>
+
+    <TextView
+        android:id="@+id/item_news_image_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@{NewsItemImage.title1}"
+        android:textColor="@color/dark_text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/item_news_image_username"
+        android:layout_width="5dp"
+        android:layout_height="34dp"
+        android:text="@{NewsItemImage.username}"
+        android:textColor="@color/dark_text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.967" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

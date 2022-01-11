@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="NewsItemText"
+            type="com.example.stocknews.data.NewsItem" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp">
+    android:background="?attr/background_color">
+
+
+    <TextView
+        android:text="@{NewsItemText.title1}"
+        android:textColor="?attr/text_color"
+        android:id="@+id/item_news_text_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:text="@{NewsItemText.content1}"
+        android:textColor="?attr/text_color"
+        android:id="@+id/item_news_text_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/item_news_text_userimg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_news_text_title"
+        app:layout_constraintVertical_bias="0.057" />
+
+
+    <TextView
+        android:textColor="?attr/text_color"
+        android:id="@+id/item_news_text_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@{NewsItemText.username}"
+        app:layout_constraintBottom_toBottomOf="@+id/item_news_text_userimg"
+        app:layout_constraintStart_toEndOf="@+id/item_news_text_userimg"
+        app:layout_constraintTop_toTopOf="@+id/item_news_text_userimg" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
